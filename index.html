@@ -17,22 +17,19 @@
       <button class="test-btn">Click me</button>
     </main>
 
-    <script
-      src="https://code.jquery.com/jquery-1.12.4.min.js"
-      integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
-      crossorigin="anonymous"
-    ></script>
-    <!--    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>-->
-    <!--    <script src="https://roma-kovalevskyi.github.io/og/js/main.js"></script>-->
+    <script src="https://code.jquery.com/jquery-1.8.3.min.js"></script>
     <script>
-      // alert('Without document ready');
-
       // document
       //   .querySelector('.test-btn')
       //   .addEventListener('click', function () {
       //     console.log("I'm here");
       //     alert('Button without Jquery!!!');
       //   });
+      if (typeof jQuery !== 'undefined') {
+        alert('jQuery is loaded');
+      } else {
+        alert('jQuery is not loaded');
+      }
       $(document).ready(function () {
         $('.test-btn').click(function () {
           alert('Button was clicked!');

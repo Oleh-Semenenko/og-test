@@ -22,7 +22,8 @@
     <script>
         // alert('Without document ready');
 
-        document.getElementById('test-btn').addEventListener('click', function() {
+        document.querySelector('test-btn').addEventListener('click', function() {
+          console.log("I'm here")
             alert('Button without Jquery!!!');
         });
 
